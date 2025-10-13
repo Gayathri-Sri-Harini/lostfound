@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const verifyToken = require('../middleware/verifyToken');
-const itemController = require('../controllers/itemController'); // 🔴 check this line
+const ItemController = require('../controllers/ItemController'); // 🔴 check this line
 
 const {
   reportItem,
