@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const verifyToken = require('../middleware/verifyToken');
-const ItemController = require('../controllers/ItemController'); // 🔴 check this line
+ // 🔴 check this line
 
 const {
   reportItem,
   searchItems,
   getUserItems,
   markResolved // ✅ Now it's included
-} = require('../controllers/itemController');
+} = require('../controllers/ItemController');
 
 router.get('/user', getUserItems);
 router.get('/search', searchItems);
