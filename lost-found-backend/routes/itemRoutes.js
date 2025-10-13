@@ -1,14 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { verifyToken } = require("../middleware/verifyToken");
-
- // 🔴 check this line
+const verifyToken = require("../middleware/verifyToken");
 
 const {
   reportItem,
   searchItems,
   getUserItems,
-  markResolved // ✅ Now it's included
+  markResolved
 } = require('../controllers/ItemController');
 
 router.get('/user', getUserItems);
