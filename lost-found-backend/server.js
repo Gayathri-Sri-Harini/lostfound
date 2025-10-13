@@ -16,6 +16,10 @@ app.use('/api/messages', messageRoutes);
 app.use('/api/items', itemRoutes);
 app.use('/api/auth', authRoutes);
 
+app.get('/', (req, res) => {
+  res.send('✅ Lost & Found backend is running!');
+});
+
 app.get('/api', (req, res) => {
   res.send('✅ API is working!');
 });
